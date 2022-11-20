@@ -22,7 +22,8 @@
 	}
 	.selected {
 		/* background-color: rgba(0, 116, 124, 0.198); */
-		box-shadow: inset 0 0 0.9em rgb(63, 255, 249);
+		box-shadow: inset 0 0 1em rgb(63, 255, 249);
+		border-radius: 10px;
 		color: rgb(173, 255, 252);
 		opacity: 1;
 	}
@@ -34,9 +35,18 @@
 		overflow: hidden;
 		overflow-y: scroll;
 		z-index: 5;
-		margin-left: 2rem;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 	nav::-webkit-scrollbar {
 		display: none;
+	}
+
+	@media (max-width: 1600px) {
+		nav {
+			margin-left: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
 	}
 </style>
