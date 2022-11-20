@@ -1,8 +1,11 @@
 <script>
 	import { current } from '$lib/store';
+
+	import { fade } from 'svelte/transition';
 </script>
 
-<h1>{$current.Name}</h1>
+<h1 transition:fade>{$current.Name}</h1>
+<img src={$current.Media} alt="" />
 
 <style>
 	img {
