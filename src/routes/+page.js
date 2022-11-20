@@ -1,5 +1,5 @@
 export async function load({ fetch }) {
-	const res = await fetch('http://localhost:3000/data');
+	const res = await fetch(import.meta.env.VITE_API + 'data');
 	const data = await res.json();
 
 	return {
