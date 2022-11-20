@@ -1,17 +1,8 @@
 <script>
-	export let data;
-
-	const Data = data.data;
+	import { current } from '$lib/store';
 </script>
 
-{#each Data as char}
-	<p>ID:{char.ID}</p>
-	<p>{char.Name}</p>
-	<p>{char.Quote}</p>
-	<img src={char.Media} alt="" />
-	<p>{char.Audio}</p>
-	<br />
-{/each}
+<h1>{$current.Name}</h1>
 
 <style>
 	img {
