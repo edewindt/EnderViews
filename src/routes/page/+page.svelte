@@ -3,5 +3,4 @@
 	import Nav from '../../lib/nav.svelte';
 </script>
 
-<Nav />
-<h1>{test}</h1>
+<h1>Page</h1>
