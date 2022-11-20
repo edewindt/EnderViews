@@ -28,6 +28,7 @@
 		position: fixed;
 		overflow: hidden;
 		overflow-y: scroll;
+		z-index: 5;
 	}
 	nav::-webkit-scrollbar {
 		display: none;

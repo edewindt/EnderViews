@@ -7,16 +7,23 @@
 <div class="character">
 	<h1>{$current.Name}</h1>
 	<img src={$current.Media} alt="" />
+	<p>Quote: {$current.Quote}</p>
 </div>
 
 <style>
 	img {
-		height: 200px;
-		width: 200px;
+		max-width: calc(100vw - 15rem);
+		max-height: calc(100vw - 15rem);
+		height: 20rem;
+		width: 20rem;
 		object-fit: cover;
 	}
 	.character {
 		display: grid;
 		justify-content: center;
+		margin-left: 1rem;
+	}
+	p {
+		font-size: 2rem;
 	}
 </style>
