@@ -15,14 +15,21 @@
 <style>
 	li {
 		cursor: pointer;
-		background-color: black;
 		color: aliceblue;
 		padding: 1rem;
 	}
-	ul {
-		width: fit-content;
-	}
 	.selected {
 		background-color: red;
+	}
+	nav {
+		background-color: black;
+		width: 10rem;
+		height: 100%;
+		position: fixed;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+	nav::-webkit-scrollbar {
+		display: none;
 	}
 </style>

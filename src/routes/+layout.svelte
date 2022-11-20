@@ -7,4 +7,10 @@
 </script>
 
 <Nav {Data} />
-<slot />
+<main><slot /></main>
+
+<style>
+	main {
+		padding-left: 10rem;
+	}
+</style>
