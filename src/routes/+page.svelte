@@ -2,7 +2,6 @@
 	export let data;
 
 	const Data = data.data;
-	console.log(Data);
 </script>
 
 {#each Data as char}
