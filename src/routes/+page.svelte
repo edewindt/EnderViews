@@ -3,16 +3,13 @@
 
 	const Data = data.data;
 	console.log(Data);
-	// import { onMount } from 'svelte';
-	// let data;
-	// onMount(async () => {
-	// 	const res = await fetch('http://localhost:3000/data');
-
-	// 	data = await res.json();
-	// 	console.log(data);
-	// });
 </script>
 
 {#each Data as char}
+	<p>ID:{char.ID}</p>
 	<p>{char.Name}</p>
+	<p>{char.Quote}</p>
+	<p>{char.Media}</p>
+	<p>{char.Audio}</p>
+	<br />
 {/each}
