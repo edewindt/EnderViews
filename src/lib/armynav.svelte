@@ -1,7 +1,6 @@
 <script>
 	export let Data;
 	import { army } from '$lib/store.js';
-	console.log($army);
 </script>
 
 <nav>
@@ -9,9 +8,11 @@
 		{#each Data as arm}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
-			<li class:selected={$army === arm} on:click={army.set(arm)}>
-				<span> {arm.ID}</span><span>{arm.Name}</span>
-			</li>
+			<a href={'/armies/' + arm.ID}>
+				<li class:selected={$army.ID === arm.ID} on:click={army.set(arm)}>
+					<span> {arm.ID}</span><span>{arm.Name}</span>
+				</li>
+			</a>
 		{/each}
 	</ul>
 </nav>
