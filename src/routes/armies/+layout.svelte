@@ -1,5 +1,5 @@
 <script>
-	import Nav from '$lib/charnav.svelte';
+	import Nav from '$lib/armynav.svelte';
 	export let data;
 	let Data = data.data;
 </script>

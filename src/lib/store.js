@@ -13,4 +13,9 @@ export const current = writable({
 	Species: 'Human'
 });
 
-export const currentID = writable({ id: 1 });
+export const army = writable({
+	ID: 1,
+	Name: 'Dragon Army',
+	NotableMembers: ['Ender Wiggin', 'Bean', 'Fly Mollo', 'Vlad', 'Crazy Tom'],
+	Media: 'http://localhost:3000/dragon-army.webp'
+});
