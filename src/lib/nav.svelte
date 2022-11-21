@@ -12,6 +12,7 @@
 <nav>
 	<ul>
 		{#each nav as { name, url }}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<li
 				on:click={() => {
 					page.set(name);
@@ -37,9 +38,13 @@
 
 	a {
 		color: aliceblue;
+		opacity: 0.6;
+		padding: 1rem;
 	}
 	.selected {
-		color: red;
+		box-shadow: inset 0 0 1em rgb(63, 255, 249);
+		color: pink;
+		opacity: 1;
 	}
 	ul {
 		display: flex;

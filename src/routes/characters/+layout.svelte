@@ -1,9 +1,18 @@
 <script>
 	import Nav from '$lib/charnav.svelte';
+	import { onMount } from 'svelte';
+	import { page } from '$lib/store';
 	export let data;
 	let Data = data.data;
+	const title = 'Characters';
+	onMount(() => {
+		page.set(title);
+	});
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 <body>
 	<Nav {Data} />
 	<main><slot /></main>
