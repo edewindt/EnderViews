@@ -1,14 +1,10 @@
 <script>
-	import { current } from '$lib/store';
 	export let data;
-	export let DATA;
-	let id = data.params.id;
-	console.log(DATA);
-
-	import { currentID } from '$lib/store.js';
+	const Data = data.data;
+	import { current } from '$lib/store';
 	import { onMount } from 'svelte';
 	onMount(() => {
-		current.set(id);
+		current.set(Data);
 	});
 </script>
 

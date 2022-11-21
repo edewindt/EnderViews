@@ -3,7 +3,8 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-li {
+li,
+a {
 	list-style: none;
 	text-decoration: none;
 }
