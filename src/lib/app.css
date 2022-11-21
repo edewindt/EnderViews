@@ -2,9 +2,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	color: aliceblue;
 }
 li {
 	list-style: none;
 	text-decoration: none;
+}
+body {
+	color: aliceblue;
 }

@@ -14,8 +14,10 @@
 		</div>
 
 		<div class="details">
-			<p>Trivia: {$current.Trivia}</p>
-			<p>Bio: {$current.Bio}</p>
+			<h2>Trivia</h2>
+			<p>{$current.Trivia}</p>
+			<h2>Bio</h2>
+			<p>{$current.Bio}</p>
 		</div>
 	</div>
 </section>
@@ -26,6 +28,7 @@
 		justify-content: center;
 		max-height: 100vh;
 	}
+
 	img {
 		max-width: calc(100vw - 20rem);
 		max-height: calc(100vw - 20rem);
@@ -36,20 +39,38 @@
 	.details {
 		display: flex;
 		flex-direction: column;
-		width: 20rem;
+		width: 25rem;
+		background-color: rgba(0, 0, 0, 0.568);
+		gap: 1rem;
+		padding: 2rem;
+		overflow: hidden;
+		overflow-y: scroll;
+		box-shadow: inset 0 0 1em rgb(63, 255, 249);
 	}
 	.wrap {
 		display: flex;
 		flex-direction: column;
-		width: 20rem;
+		width: 25rem;
 		gap: 1rem;
+		background-color: rgba(0, 0, 0, 0.568);
+		padding: 2rem;
+		overflow: hidden;
+		overflow-y: scroll;
+		box-shadow: inset 0 0 1em rgb(63, 255, 249);
 	}
+	.wrap::-webkit-scrollbar {
+		display: none;
+	}
+	.details::-webkit-scrollbar {
+		display: none;
+	}
+
 	.character {
 		padding: 2rem;
 		display: flex;
 		gap: 12rem;
 	}
 	p {
-		font-size: 2rem;
+		font-size: 1.4rem;
 	}
 </style>
