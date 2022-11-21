@@ -1,7 +1,5 @@
 <script>
 	import { current } from '$lib/store';
-
-	import { fade } from 'svelte/transition';
 </script>
 
 <section>

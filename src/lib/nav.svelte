@@ -1,9 +1,6 @@
 <script>
 	export let Data;
 	import { current } from '$lib/store.js';
-	import { currentID } from '$lib/store.js';
-	import { onMount } from 'svelte';
-	$: current.set(Data[$currentID - 1]);
 </script>
 
 <nav>
