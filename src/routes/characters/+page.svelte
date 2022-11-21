@@ -9,6 +9,8 @@
 		<div class="wrap">
 			<h1>{$current.Name}</h1>
 			<img src={$current.Media} alt="" />
+			<h2>Image URL</h2>
+			<p>{$current.Media}</p>
 			<h2>Quote</h2>
 			<p>{$current.Quote}</p>
 		</div>
@@ -18,6 +20,8 @@
 			<p>{$current.Trivia}</p>
 			<h2>Bio</h2>
 			<p>{$current.Bio}</p>
+			<h2>Species</h2>
+			<p>{$current.Species}</p>
 		</div>
 	</div>
 </section>

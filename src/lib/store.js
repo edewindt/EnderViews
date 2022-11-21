@@ -7,3 +7,5 @@ export const current = writable({
 	Media: 'http://localhost:3000/ender-wiggin.jpeg',
 	Audio: 'ender audio'
 });
+
+export const currentID = writable({ id: 1 });
