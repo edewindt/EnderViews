@@ -9,7 +9,7 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
 			<a href={'/characters/' + char.ID}
-				><li class:selected={$current === char} on:click={current.set(char)}>
+				><li class:selected={$current.ID === char.ID} on:click={current.set(char)}>
 					<span> {char.ID}</span><span>{char.Name}</span>
 				</li></a
 			>
