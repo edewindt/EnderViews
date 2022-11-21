@@ -19,3 +19,5 @@ export const army = writable({
 	NotableMembers: ['Ender Wiggin', 'Bean', 'Fly Mollo', 'Vlad', 'Crazy Tom'],
 	Media: 'http://localhost:3000/dragon-army.webp'
 });
+
+export const page = writable('Home');

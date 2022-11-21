@@ -1,15 +1,24 @@
 <script>
+	import { onMount } from 'svelte';
+	import { page } from '$lib/store';
 	let nav = [
 		{ name: 'Home', url: '/' },
 		{ name: 'Characters', url: '/characters' },
 		{ name: 'Armies', url: '/armies' }
 	];
+	$: console.log($page);
 </script>
 
 <nav>
 	<ul>
 		{#each nav as { name, url }}
-			<li><a href={url}>{name}</a></li>
+			<li
+				on:click={() => {
+					page.set(name);
+				}}
+			>
+				<a class:selected={$page === name} href={url}>{name}</a>
+			</li>
 		{/each}
 	</ul>
 </nav>
@@ -25,8 +34,12 @@
 		background-color: black;
 		height: 5rem;
 	}
+
 	a {
 		color: aliceblue;
+	}
+	.selected {
+		color: red;
 	}
 	ul {
 		display: flex;
