@@ -7,7 +7,7 @@
 	});
 	let i = 0;
 	let heroes = [
-		'https://eliasdewindt.com/_app/immutable/assets/lavacomp-6948a1d5.png',
+		'http://localhost:3000/formic-terrain.jpg',
 		'https://eliasdewindt.com/_app/immutable/assets/space-e775814d.jpg',
 		'https://eliasdewindt.com/_app/immutable/assets/water-c190a47f.png',
 		'https://eliasdewindt.com/_app/immutable/assets/watercomp-111e8ff4.png'
@@ -18,8 +18,17 @@
 	const transition = () => {
 		if (i < heroes.length) {
 			hero = heroes[i];
+			i++;
+		} else {
+			i = 0;
 		}
 	};
+
+	const start = () => {
+		setInterval(transition, 4000);
+	};
+
+	start();
 
 	let buttons = [
 		{ name: 'Characters', url: '/characters' },
