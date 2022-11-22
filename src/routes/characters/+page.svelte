@@ -5,21 +5,21 @@
 <section>
 	<div class="character">
 		<div class="wrap">
-			<h1>{$current.Name}</h1>
-			<img src={$current.Media} alt="" />
+			<h1>{$current.name}</h1>
+			<img src={$current.media} alt="" />
 			<h2>Image URL</h2>
-			<p>{$current.Media}</p>
+			<p>{$current.media}</p>
 			<h2>Quote</h2>
-			<p>{$current.Quote}</p>
+			<p>{$current.quote}</p>
 		</div>
 
 		<div class="details">
 			<h2>Trivia</h2>
-			<p>{$current.Trivia}</p>
+			<p>{$current.trivia}</p>
 			<h2>Bio</h2>
-			<p>{$current.Bio}</p>
+			<p>{$current.bio}</p>
 			<h2>Species</h2>
-			<p>{$current.Species}</p>
+			<p>{$current.species}</p>
 		</div>
 	</div>
 </section>

@@ -8,9 +8,9 @@
 		{#each Data as spec}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
-			<a href={'/species/' + spec.ID}
-				><li class:selected={$species.ID === spec.ID} on:click={species.set(spec)}>
-					<span> {spec.ID}</span><span>{spec.Name}</span>
+			<a href={'/species/' + spec.id}
+				><li class:selected={$species.id === spec.id} on:click={species.set(spec)}>
+					<span> {spec.id}</span><span>{spec.name}</span>
 				</li></a
 			>
 		{/each}

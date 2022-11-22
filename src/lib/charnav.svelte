@@ -8,9 +8,9 @@
 		{#each Data as char}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
-			<a href={'/characters/' + char.ID}
-				><li class:selected={$current.ID === char.ID} on:click={current.set(char)}>
-					<span> {char.ID}</span><span>{char.Name}</span>
+			<a href={'/characters/' + char.id}
+				><li class:selected={$current.id === char.id} on:click={current.set(char)}>
+					<span> {char.id}</span><span>{char.name}</span>
 				</li></a
 			>
 		{/each}

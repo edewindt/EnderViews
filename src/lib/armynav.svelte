@@ -8,9 +8,9 @@
 		{#each Data as arm}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
-			<a href={'/armies/' + arm.ID}>
-				<li class:selected={$army.ID === arm.ID} on:click={army.set(arm)}>
-					<span> {arm.ID}</span><span>{arm.Name}</span>
+			<a href={'/armies/' + arm.id}>
+				<li class:selected={$army.id === arm.id} on:click={army.set(arm)}>
+					<span> {arm.id}</span><span>{arm.name}</span>
 				</li>
 			</a>
 		{/each}

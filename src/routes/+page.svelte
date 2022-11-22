@@ -8,9 +8,9 @@
 	let i = 0;
 	let heroes = [
 		'http://localhost:3000/formic-terrain.jpg',
-		'https://eliasdewindt.com/_app/immutable/assets/space-e775814d.jpg',
-		'https://eliasdewindt.com/_app/immutable/assets/water-c190a47f.png',
-		'https://eliasdewindt.com/_app/immutable/assets/watercomp-111e8ff4.png'
+		'http://localhost:3000/formic-ships.jpg',
+		'http://localhost:3000/xenocide.jpg',
+		'http://localhost:3000/space.jpg'
 	];
 
 	let hero = heroes[i];

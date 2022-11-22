@@ -5,19 +5,19 @@
 <section>
 	<div class="species">
 		<div class="wrap">
-			<h1>{$species.Name}</h1>
-			<img src={$species.Media} alt="" />
+			<h1>{$species.name}</h1>
+			<img src={$species.media} alt="" />
 			<h2>Image URL</h2>
-			<p>{$species.Media}</p>
+			<p>{$species.media}</p>
 		</div>
 
 		<div class="details">
 			<h2>Ramen</h2>
-			<p>{$species.Ramen}</p>
+			<p>{$species.ramen}</p>
 			<h2>Varelse</h2>
-			<p>{$species.Varelse}</p>
+			<p>{$species.varelse}</p>
 			<h2>Bahavior</h2>
-			<p>{$species.Behavior}</p>
+			<p>{$species.behavior}</p>
 		</div>
 	</div>
 </section>

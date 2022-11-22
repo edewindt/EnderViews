@@ -11,15 +11,15 @@
 <section>
 	<div class="army">
 		<div class="wrap">
-			<h1>{$army.Name}</h1>
-			<img src={$army.Media} alt="" />
+			<h1>{$army.name}</h1>
+			<img src={$army.media} alt="" />
 			<h2>Image URL</h2>
-			<p>{$army.Media}</p>
+			<p>{$army.media}</p>
 		</div>
 
 		<div class="details">
 			<h2>Notable Members</h2>
-			{#each $army.NotableMembers as mem}<p>{mem}</p>{/each}
+			{#each $army.notable_members as mem}<p>{mem}</p>{/each}
 		</div>
 	</div>
 </section>
