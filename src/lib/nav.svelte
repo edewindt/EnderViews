@@ -2,36 +2,50 @@
 	import { onMount } from 'svelte';
 	import { page } from '$lib/store';
 	let nav = [
-		{ name: 'Home', url: '/' },
+		{ name: 'Species', url: '/species' },
 		{ name: 'Characters', url: '/characters' },
 		{ name: 'Armies', url: '/armies' }
 	];
 	$: console.log($page);
 </script>
 
-<nav>
-	<ul>
-		{#each nav as { name, url }}
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<li
-				on:click={() => {
-					page.set(name);
-				}}
-			>
-				<a class:selected={$page === name} href={url}>{name}</a>
-			</li>
-		{/each}
-	</ul>
-</nav>
+<header>
+	<h1 class:hero={$page === 'Home'}><a href="/">The Ender API</a></h1>
+
+	<nav>
+		<ul>
+			{#each nav as { name, url }}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<li
+					on:click={() => {
+						page.set(name);
+					}}
+				>
+					<a class:selected={$page === name} href={url}>{name}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
+</header>
 
 <style>
-	nav {
+	header {
 		position: fixed;
+		width: 100%;
+		z-index: 10;
+		height: 5rem;
+	}
+	h1 {
+		background-color: black;
+		text-align: center;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+			sans-serif;
+	}
+
+	nav {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
-		z-index: 10;
 		background-color: black;
 		height: 5rem;
 	}
@@ -50,5 +64,9 @@
 		display: flex;
 		justify-content: space-around;
 		width: 40rem;
+	}
+	.hero a {
+		opacity: 1;
+		text-shadow: 0rem 0rem 0.5rem pink;
 	}
 </style>

@@ -1,16 +1,16 @@
 <script>
 	export let Data;
-	import { current } from '$lib/store.js';
+	import { species } from '$lib/store.js';
 </script>
 
 <nav>
 	<ul>
-		{#each Data as char}
+		{#each Data as spec}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
-			<a href={'/characters/' + char.ID}
-				><li class:selected={$current.ID === char.ID} on:click={current.set(char)}>
-					<span> {char.ID}</span><span>{char.Name}</span>
+			<a href={'/species/' + spec.ID}
+				><li class:selected={$species.ID === spec.ID} on:click={species.set(spec)}>
+					<span> {spec.ID}</span><span>{spec.Name}</span>
 				</li></a
 			>
 		{/each}
@@ -45,7 +45,7 @@
 	nav {
 		background-color: rgba(0, 0, 0, 0.568);
 		width: 10rem;
-		height: 80%;
+		height: 100%;
 		position: fixed;
 		overflow: hidden;
 		overflow-y: scroll;

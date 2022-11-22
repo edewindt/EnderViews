@@ -1,19 +1,29 @@
 <script>
-	import { army } from '$lib/store';
+	export let data;
+	const Data = data.data;
+	import { species } from '$lib/store';
+	import { onMount } from 'svelte';
+	onMount(() => {
+		species.set(Data);
+	});
 </script>
 
 <section>
-	<div class="army">
+	<div class="species">
 		<div class="wrap">
-			<h1>{$army.Name}</h1>
-			<img src={$army.Media} alt="" />
+			<h1>{$species.Name}</h1>
+			<img src={$species.Media} alt="" />
 			<h2>Image URL</h2>
-			<p>{$army.Media}</p>
+			<p>{$species.Media}</p>
 		</div>
 
 		<div class="details">
-			<h2>Notable Members</h2>
-			{#each $army.NotableMembers as mem}<p>{mem}</p>{/each}
+			<h2>Ramen</h2>
+			<p>{$species.Ramen}</p>
+			<h2>Varelse</h2>
+			<p>{$species.Varelse}</p>
+			<h2>Bahavior</h2>
+			<p>{$species.Behavior}</p>
 		</div>
 	</div>
 </section>
@@ -61,7 +71,7 @@
 		display: none;
 	}
 
-	.army {
+	.species {
 		padding: 2rem;
 		display: flex;
 		gap: 12rem;

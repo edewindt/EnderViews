@@ -8,6 +8,6 @@
 
 <style>
 	.e {
-		padding-top: 5rem;
+		padding-top: 7rem;
 	}
 </style>

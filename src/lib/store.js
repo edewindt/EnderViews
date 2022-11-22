@@ -21,3 +21,13 @@ export const army = writable({
 });
 
 export const page = writable('Home');
+
+export const species = writable({
+	ID: 1,
+	Name: 'Human',
+	Ramen: true,
+	Varelse: false,
+	Behavior:
+		'Humans are sophisticated mammals that live relatively short life periods, with a high enough intellect for language, art, math, technology, and many other complex activities.',
+	Media: 'http://localhost:3000/peter-wiggin.webp'
+});
