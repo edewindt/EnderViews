@@ -34,7 +34,7 @@
 		{ name: 'Characters', url: '/characters' },
 		{ name: 'Species', url: '/species' },
 		{ name: 'Armies', url: '/armies' },
-		{ name: 'Swagger Docs', url: '/' },
+		{ name: 'Swagger Docs', url: import.meta.env.VITE_API + 'swagger' },
 		{ name: 'GraphQL', url: '/' }
 	];
 </script>

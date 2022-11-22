@@ -11,6 +11,10 @@
 
 <header>
 	<h1 class:hero={$page === 'Home'}><a href="/">The Ender API</a></h1>
+	<div class="docs">
+		<h2><a href={import.meta.env.VITE_API + 'swagger'}>Swagger Docs</a></h2>
+		<h2>| GraphQL</h2>
+	</div>
 
 	<nav>
 		<ul>
@@ -41,7 +45,18 @@
 		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
 			sans-serif;
 	}
-
+	.docs {
+		display: flex;
+		justify-content: center;
+		background-color: black;
+		text-align: center;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+			sans-serif;
+	}
+	h2 a {
+		color: pink;
+		opacity: 1;
+	}
 	nav {
 		display: flex;
 		justify-content: center;
