@@ -13,7 +13,6 @@
 	<h1 class:hero={$page === 'Home'}><a href="/">The Ender API</a></h1>
 	<div class="docs">
 		<h2><a href={import.meta.env.VITE_API + 'swagger'}>Swagger Docs</a></h2>
-		<h2>| GraphQL</h2>
 	</div>
 
 	<nav>
