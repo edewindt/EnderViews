@@ -7,10 +7,10 @@
 	});
 	let i = 0;
 	let heroes = [
-		'http://localhost:3000/formic-terrain.jpg',
-		'http://localhost:3000/formic-ships.jpg',
-		'http://localhost:3000/xenocide.jpg',
-		'http://localhost:3000/space.jpg'
+		import.meta.env.VITE_API + 'formic-terrain.jpg',
+		import.meta.env.VITE_API + 'formic-ships.jpg',
+		import.meta.env.VITE_API + 'xenocide.jpg',
+		import.meta.env.VITE_API + 'space.jpg'
 	];
 
 	let hero = heroes[i];
@@ -34,8 +34,7 @@
 		{ name: 'Characters', url: '/characters' },
 		{ name: 'Species', url: '/species' },
 		{ name: 'Armies', url: '/armies' },
-		{ name: 'Swagger Docs', url: import.meta.env.VITE_API + 'swagger' },
-		{ name: 'GraphQL', url: '/' }
+		{ name: 'Swagger Docs', url: import.meta.env.VITE_API + 'swagger' }
 	];
 </script>
 

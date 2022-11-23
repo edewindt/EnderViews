@@ -15,13 +15,16 @@
 </svelte:head>
 <body>
 	<Nav {Data} />
-	<main><slot /></main>
+	<main
+		style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	url({import.meta.env.VITE_API + 'space.jpg'});"
+	>
+		<slot />
+	</main>
 </body>
 
 <style>
 	main {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url('http://localhost:3000/space.jpg');
 		height: 50%;
 		background-position: center;
 		background-repeat: no-repeat;
