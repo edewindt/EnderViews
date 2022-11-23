@@ -6,7 +6,6 @@
 		{ name: 'Characters', url: '/characters' },
 		{ name: 'Armies', url: '/armies' }
 	];
-	$: console.log($page);
 </script>
 
 <header>
