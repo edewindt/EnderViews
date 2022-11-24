@@ -1,6 +1,12 @@
 <script>
 	export let Data;
 	import { species } from '$lib/store.js';
+	import { onMount } from 'svelte';
+	let cspec;
+	onMount(() => {
+		console.log($species);
+		cspec = $species.id;
+	});
 </script>
 
 <nav>
@@ -9,15 +15,39 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
 			<a href={'/species/' + spec.id}
-				><li class:selected={$species.id === spec.id} on:click={species.set(spec)}>
+				><li
+					class:selected={$species.id === spec.id}
+					on:click={() => {
+						species.set(spec);
+						cspec = spec.id;
+					}}
+				>
 					<span> {spec.id}</span><span>{spec.name}</span>
 				</li></a
 			>
 		{/each}
 	</ul>
 </nav>
+<select bind:value={cspec} on:change={species.set(cspec)} name="armies" id="armies">
+	{#each Data as arm}
+		<option value={arm.id}>{arm.id} - {arm.name}</option>
+	{/each}
+</select>
 
 <style>
+	select {
+		width: 10rem;
+		position: fixed;
+		z-index: 10;
+		left: 50%;
+		transform: translate(-50%, 0);
+		height: 3rem;
+		padding-left: 1rem;
+		background-color: black;
+		color: pink;
+		border: none;
+		box-shadow: inset 0 0 1em rgb(63, 255, 249);
+	}
 	li {
 		cursor: pointer;
 		color: aliceblue;
@@ -52,6 +82,7 @@
 		z-index: 5;
 		left: 50%;
 		transform: translate(-50%, 0);
+		top: 11rem;
 	}
 	nav::-webkit-scrollbar {
 		display: none;
