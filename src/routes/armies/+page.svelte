@@ -70,6 +70,7 @@
 	}
 	p {
 		font-size: 1.4rem;
+		overflow-wrap: break-word;
 	}
 	@media (max-width: 1000px) {
 		.army {
