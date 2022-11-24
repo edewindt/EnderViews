@@ -30,8 +30,8 @@
 	}
 
 	img {
-		max-width: calc(100vw - 20rem);
-		max-height: calc(100vw - 20rem);
+		max-width: calc(100vw - 5rem);
+		max-height: calc(100vw - 5rem);
 		height: 20rem;
 		width: 20rem;
 		object-fit: cover;
@@ -41,6 +41,7 @@
 		flex-direction: column;
 		width: 25rem;
 		background-color: rgba(0, 0, 0, 0.568);
+		max-width: calc(100vw - 1rem);
 		gap: 1rem;
 		padding: 2rem;
 		overflow: hidden;
@@ -53,6 +54,7 @@
 		width: 25rem;
 		gap: 1rem;
 		background-color: rgba(0, 0, 0, 0.568);
+		max-width: calc(100vw - 1rem);
 		padding: 2rem;
 		overflow: hidden;
 		overflow-y: scroll;
@@ -72,5 +74,16 @@
 	}
 	p {
 		font-size: 1.4rem;
+		overflow-wrap: break-word;
+	}
+	@media (max-width: 1000px) {
+		.species {
+			gap: 1rem;
+		}
+	}
+	@media (max-width: 850px) {
+		.species {
+			flex-direction: column;
+		}
 	}
 </style>
