@@ -3,10 +3,7 @@
 	import { species } from '$lib/store.js';
 	import { onMount } from 'svelte';
 	let cspec;
-	onMount(() => {
-		console.log($species);
-		cspec = $species.id;
-	});
+	$: cspec = $species.id;
 </script>
 
 <nav>
