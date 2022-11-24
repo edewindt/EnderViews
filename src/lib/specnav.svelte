@@ -1,9 +1,7 @@
 <script>
 	export let Data;
 	import { species } from '$lib/store.js';
-	import { onMount } from 'svelte';
 	let cspec;
-	$: cspec = $species.id;
 </script>
 
 <nav>
@@ -16,7 +14,7 @@
 					class:selected={$species.id === spec.id}
 					on:click={() => {
 						species.set(spec);
-						cspec = spec.id;
+						cspec = spec;
 					}}
 				>
 					<span> {spec.id}</span><span>{spec.name}</span>
@@ -27,7 +25,7 @@
 </nav>
 <select bind:value={cspec} on:change={species.set(cspec)} name="armies" id="armies">
 	{#each Data as arm}
-		<option value={arm.id}>{arm.id} - {arm.name}</option>
+		<option value={arm}>{arm.id} - {arm.name}</option>
 	{/each}
 </select>
 
