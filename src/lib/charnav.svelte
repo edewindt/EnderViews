@@ -60,11 +60,9 @@
 		padding-top: 1rem;
 	}
 
-	@media (max-width: 1600px) {
+	@media (max-width: 1000px) {
 		nav {
-			margin-left: 0;
-			left: 50%;
-			transform: translate(-50%, 0);
+			display: none;
 		}
 	}
 </style>

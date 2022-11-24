@@ -1,6 +1,7 @@
 <script>
 	export let Data;
 	import { army } from '$lib/store.js';
+	let carm;
 </script>
 
 <nav>
@@ -16,6 +17,12 @@
 		{/each}
 	</ul>
 </nav>
+
+<select bind:value={carm} on:change={army.set(carm)} name="armies" id="armies">
+	{#each Data as arm}
+		<option value={arm}>{arm.name}</option>
+	{/each}
+</select>
 
 <style>
 	li {
@@ -60,11 +67,9 @@
 		padding-top: 1rem;
 	}
 
-	@media (max-width: 1600px) {
+	@media (max-width: 1000px) {
 		nav {
-			margin-left: 0;
-			left: 50%;
-			transform: translate(-50%, 0);
+			display: none;
 		}
 	}
 </style>
