@@ -10,7 +10,13 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
 			<a href={'/armies/' + arm.id}>
-				<li class:selected={$army.id === arm.id} on:click={army.set(arm)}>
+				<li
+					class:selected={$army.id === arm.id}
+					on:click={() => {
+						army.set(arm);
+						carm = arm;
+					}}
+				>
 					<span> {arm.id}</span><span>{arm.name}</span>
 				</li>
 			</a>
@@ -20,11 +26,24 @@
 
 <select bind:value={carm} on:change={army.set(carm)} name="armies" id="armies">
 	{#each Data as arm}
-		<option value={arm}>{arm.name}</option>
+		<option value={arm}>{arm.id} - {arm.name}</option>
 	{/each}
 </select>
 
 <style>
+	select {
+		width: 10rem;
+		position: fixed;
+		z-index: 10;
+		left: 50%;
+		transform: translate(-50%, 0);
+		height: 3rem;
+		padding-left: 1rem;
+		background-color: black;
+		color: pink;
+		border: none;
+		box-shadow: inset 0 0 1em rgb(63, 255, 249);
+	}
 	li {
 		cursor: pointer;
 		color: aliceblue;
@@ -59,6 +78,7 @@
 		z-index: 5;
 		left: 50%;
 		transform: translate(-50%, 0);
+		top: 11rem;
 	}
 	nav::-webkit-scrollbar {
 		display: none;

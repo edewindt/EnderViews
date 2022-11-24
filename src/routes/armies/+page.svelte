@@ -26,8 +26,8 @@
 	}
 
 	img {
-		max-width: calc(100vw - 20rem);
-		max-height: calc(100vw - 20rem);
+		max-width: calc(100vw - 5rem);
+		max-height: calc(100vw - 5rem);
 		height: 20rem;
 		width: 20rem;
 		object-fit: cover;
@@ -35,6 +35,7 @@
 	.details {
 		display: flex;
 		flex-direction: column;
+		max-width: calc(100vw - 1rem);
 		width: 25rem;
 		background-color: rgba(0, 0, 0, 0.568);
 		gap: 1rem;
@@ -46,6 +47,7 @@
 	.wrap {
 		display: flex;
 		flex-direction: column;
+		max-width: calc(100vw - 1rem);
 		width: 25rem;
 		gap: 1rem;
 		background-color: rgba(0, 0, 0, 0.568);
@@ -68,5 +70,15 @@
 	}
 	p {
 		font-size: 1.4rem;
+	}
+	@media (max-width: 1000px) {
+		.army {
+			gap: 1rem;
+		}
+	}
+	@media (max-width: 850px) {
+		.army {
+			flex-direction: column;
+		}
 	}
 </style>
