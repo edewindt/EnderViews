@@ -23,7 +23,14 @@
 		{/each}
 	</ul>
 </nav>
-<select bind:value={cspec} on:change={species.set(cspec)} name="armies" id="armies">
+<select
+	bind:value={cspec}
+	on:change={() => {
+		species.set(cspec);
+	}}
+	name="armies"
+	id="armies"
+>
 	{#each Data as arm}
 		<option value={arm}>{arm.id} - {arm.name}</option>
 	{/each}
